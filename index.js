@@ -9,8 +9,8 @@ amqp.connect('amqp://localhost', function(error0, connection) {
             throw error1;
         }
 
-        var queue = 'NEW_TICKET';
-        var queue2 = 'TICKET_FOUND';
+        var queue = 'NEW_RENTAL';
+        var queue2 = 'RENTAL_FOUND';
 
         channel.assertQueue(queue, {
             durable: true,
@@ -20,7 +20,7 @@ amqp.connect('amqp://localhost', function(error0, connection) {
             durable: true,
         });
 
-        console.log("RabbitMQ running")
+        console.log("RabbitMQ running...")
 
     });
 });
